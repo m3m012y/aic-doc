@@ -16,6 +16,13 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl start docker
 
+# optional post-installation procedures
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 # Update the package index, and install the latest version of Docker Compose
 sudo apt-get update
 sudo apt-get install -y docker-compose-plugin
