@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl start docker
 
-# optional post-installation procedures
+# Optional post-installation procedures
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
@@ -30,3 +30,7 @@ sudo apt-get install -y docker-compose-plugin
 # Install git
 sudo apt-get update
 sudo apt-get install -y git
+
+# Install open-shh
+sudo apt install openssh-server
+sudo systemctl restart ssh.service
