@@ -1,0 +1,25 @@
+services:
+  redroid-1:
+    image: m3m012y/redroid-rockchip:12_opi5_v0.2
+    stdin_open: true
+    tty: true
+    privileged: true
+    ports:
+      - "5555:5555"
+    volumes:
+      - ~/storage/redroid-1:/data
+      - /dev/mali0:/dev/mali0
+    command:
+      - androidboot.redroid_width=720
+      - androidboot.redroid_height=1280
+      - androidboot.redroid_dpi=360
+      - androidboot.redroid_fps=30
+      - androidboot.redroid_gpu_mode=mali
+      - androidboot.redroid_wifi=1
+      - ro.product.model=Pixel 6
+      - ro.product.brand=google
+      - ro.product.name=oriole
+      - ro.product.device=oriole
+      - ro.product.manufacturer=Google
+      - ro.build.fingerprint=google/oriole/oriole:12/SP1A.210812.016/7679548:user/release-keys
+
