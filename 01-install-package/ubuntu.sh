@@ -30,7 +30,7 @@ sudo systemctl enable containerd.service
 sudo apt-get update
 sudo apt-get install git
 
-# Optional orange pi build jammy server
+# Optional orange pi build jammy server to install mali driver
 sudo apt install ocl-icd-opencl-dev libx11-xcb1 libxcb-dri2-0
 sudo apt autoremove
 
